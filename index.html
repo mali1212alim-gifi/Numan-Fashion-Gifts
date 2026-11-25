@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script>(function(){var h=location.hash.slice(1);document.documentElement.dataset.page=['contact','social','location','categories'].indexOf(h)>-1?h:'home'})()</script>
+  <meta name="description" content="NUMAN FASHION & GIFTS — Wear Style, Live Better. Gifts for Every Moment.">
+  <title>NUMAN FASHION &amp; GIFTS | Wear Style, Live Better</title>
+  <style>
+    :root{--black:#080808;--panel:#111;--panel2:#171717;--white:#f7f5f0;--muted:#aaa69d;--gold:#c8a65d;--gold2:#e5ce91;--line:rgba(200,166,93,.25);--serif:Georgia,"Times New Roman",serif;--sans:Arial,Helvetica,sans-serif}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:100px}
+    body{margin:0;background:var(--black);color:var(--white);font-family:var(--sans);line-height:1.6;overflow-x:hidden}
+    a{color:inherit;text-decoration:none}
+    img{display:block;max-width:100%}
+    button{font:inherit}
+    .top-credit{position:fixed;inset:0 0 auto;z-index:1000;min-height:34px;padding:5px clamp(12px,4vw,54px);display:flex;align-items:center;justify-content:space-between;gap:12px;background:#050505;border-bottom:1px solid rgba(200,166,93,.25);font-size:10px;letter-spacing:.09em;color:#c9c5bc}
+    .top-credit .credit-name{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .top-contact{display:inline-flex;align-items:center;gap:6px;color:var(--gold2);font-weight:700;white-space:nowrap}
+    .top-contact svg{width:13px;height:13px;fill:currentColor}
+    .site-header{position:sticky;top:34px;z-index:900;background:rgba(8,8,8,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+    .brand-wrap{max-width:1200px;margin:auto;padding:22px 22px 14px;display:flex;align-items:center;justify-content:center;gap:17px;text-align:center}
+    .brand-logo{width:64px;height:64px;object-fit:contain}
+    .brand-name{font-family:var(--serif);font-size:clamp(34px,6vw,55px);font-weight:500;letter-spacing:.16em;line-height:1;color:#fff}
+    .brand-category{margin-top:7px;color:var(--gold);font-size:10px;letter-spacing:.38em;font-weight:700}
+    .brand-tagline{margin:7px 0 0;color:#bcb8af;font-family:var(--serif);font-style:italic;font-size:13px;letter-spacing:.04em}
+    .nav{max-width:1200px;margin:auto;padding:0 18px 13px;display:flex;justify-content:center;align-items:center;gap:clamp(14px,3vw,34px);flex-wrap:wrap}
+    .nav a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#d8d5ce;transition:color .25s}
+    .nav a:hover,.nav a:focus-visible{color:var(--gold2)}
+    main{overflow:hidden}
+    .hero{position:relative;min-height:590px;display:grid;place-items:center;padding:75px 22px 65px;text-align:center;isolation:isolate}
+    .hero::before{content:"";position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.55),rgba(0,0,0,.86)),url("images/fashion-background.jpg") center/cover no-repeat;background-color:#151515}
+    .hero::after{content:"";position:absolute;inset:18px;z-index:-1;border:1px solid rgba(200,166,93,.3);pointer-events:none}
+    .eyebrow{color:var(--gold2);font-size:10px;letter-spacing:.35em;text-transform:uppercase;font-weight:700}
+    .hero h1{max-width:900px;margin:18px auto 12px;font-family:var(--serif);font-weight:400;font-size:clamp(42px,8vw,86px);line-height:1.02;letter-spacing:.045em}
+    .hero h1 span{color:var(--gold2);font-style:italic}
+    .hero p{max-width:560px;margin:16px auto 27px;color:#d0ccc4;font-family:var(--serif);font-size:18px}
+    .hero-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+    .btn{min-height:46px;padding:12px 21px;border:1px solid var(--gold);display:inline-flex;align-items:center;justify-content:center;gap:9px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:700;transition:transform .25s,background .25s,color .25s,border-color .25s;cursor:pointer}
+    .btn:hover{transform:translateY(-3px);background:var(--gold);color:#090909}
+    .btn-gold{background:var(--gold);color:#090909}
+    .btn-gold:hover{background:var(--gold2);border-color:var(--gold2)}
+    .btn-outline{background:transparent;color:var(--white)}
+    .section{max-width:1200px;margin:auto;padding:88px 22px}
+    .section-heading{text-align:center;margin:0 auto 38px;max-width:650px}
+    .section-heading .eyebrow{display:block;margin-bottom:10px}
+    .section-heading h2{font-family:var(--serif);font-size:clamp(31px,5vw,48px);font-weight:400;line-height:1.12;margin:0}
+    .section-heading p{color:var(--muted);font-size:14px;margin:13px auto 0}
+    .gold-rule{width:54px;height:1px;background:var(--gold);margin:19px auto 0}
+    .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .product-card{position:relative;overflow:hidden;background:var(--panel);border:1px solid rgba(255,255,255,.08);min-height:310px}
+    .product-card img{width:100%;height:360px;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1),filter .4s}
+    .product-card:hover img{transform:scale(1.055);filter:brightness(.78)}
+    .product-card::after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));pointer-events:none}
+    .product-caption{position:absolute;z-index:1;left:20px;right:20px;bottom:18px}
+    .product-caption small{color:var(--gold2);font-size:9px;letter-spacing:.2em;text-transform:uppercase}
+    .product-caption h3{font-family:var(--serif);font-size:25px;font-weight:400;margin:3px 0 0}
+    .intro-strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:linear-gradient(110deg,#0c0c0c,#15130e,#0c0c0c);padding:27px 20px;text-align:center;color:#d6d0c3;font-family:var(--serif);font-style:italic;font-size:clamp(17px,3vw,24px)}
+    .contact-grid,.payment-grid,.social-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .info-card,.payment-card,.social-card{background:linear-gradient(145deg,#151515,#0e0e0e);border:1px solid var(--line);padding:25px;position:relative}
+    .info-card h3,.payment-card h3{font-family:var(--serif);font-size:23px;font-weight:400;margin:0 0 8px}
+    .info-card p,.payment-card p{color:var(--muted);font-size:13px;margin:5px 0}
+    .info-card .btn{margin-top:17px}
+    .contact-number{font-size:21px;letter-spacing:.06em;color:#fff;font-weight:700}
+    .payment-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .payment-card{padding:24px}
+    .payment-card.bank{grid-column:1/-1}
+    .payment-logo{width:auto;height:42px;max-width:145px;object-fit:contain;object-position:left center;margin-bottom:16px}
+    .payment-label{color:var(--gold);font-size:9px;letter-spacing:.18em;text-transform:uppercase;margin:14px 0 4px}
+    .payment-value{font-size:16px;letter-spacing:.035em;overflow-wrap:anywhere}
+    .copy-row{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:13px;margin-top:13px}
+    .copy-btn{border:1px solid rgba(200,166,93,.65);background:transparent;color:var(--gold2);padding:9px 12px;font-size:9px;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:.2s}
+    .copy-btn:hover{background:var(--gold);color:#080808}
+    .social-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .social-card{min-height:150px;display:flex;align-items:center;gap:18px;transition:transform .25s,border-color .25s}
+    .social-card:hover{transform:translateY(-4px);border-color:var(--gold)}
+    .social-card img{width:54px;height:54px;object-fit:contain}
+    .social-card strong{display:block;font-family:var(--serif);font-size:23px;font-weight:400}
+    .social-card span{color:var(--muted);font-size:11px}
+    .location-card{max-width:760px;margin:auto;text-align:center;padding:35px;border:1px solid var(--line);background:radial-gradient(ellipse at top,#1b1811,#0d0d0d 70%)}
+    .pin{font-size:30px;color:var(--gold2)}
+    .location-card h3{font-family:var(--serif);font-weight:400;font-size:27px;margin:9px 0}
+    .location-card p{color:#c5c0b6;margin:0 auto 20px}
+    .qr-section{border-top:1px solid var(--line);background:radial-gradient(ellipse at 50% 0%,#211b0e 0%,#0b0b0b 58%);padding:85px 22px}
+    .qr-inner{max-width:1000px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:38px;align-items:center}
+    .qr-inner h2{font-family:var(--serif);font-size:clamp(37px,6vw,61px);line-height:1.02;font-weight:400;margin:12px 0}
+    .qr-inner h2 span{color:var(--gold2)}
+    .qr-inner p{color:#c6c1b7;max-width:540px}
+    .qr-promo-image{width:100%;max-height:330px;object-fit:cover;border:1px solid var(--line);background:#151515}
+    .ali-logo{width:100px;height:65px;object-fit:contain;object-position:left center;margin-bottom:15px}
+    .qr-contact{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:22px}
+    .whatsapp-mark{width:25px;height:25px;fill:currentColor}
+    .qr-contact .btn{font-size:11px;padding:14px 22px}
+    .site-footer{border-top:1px solid rgba(255,255,255,.08);padding:34px 22px 25px;text-align:center;background:#050505}
+    .footer-brand{font-family:var(--serif);font-size:25px;letter-spacing:.12em}
+    .site-footer p{color:#a7a39a;font-size:12px;margin:7px auto}
+    .footer-links{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:17px 0}
+    .footer-links a{font-size:11px;color:var(--gold2)}
+    .copyright{border-top:1px solid rgba(255,255,255,.07);padding-top:16px;margin-top:22px!important;font-size:10px!important;letter-spacing:.08em}
+    .toast{position:fixed;z-index:1200;bottom:22px;left:50%;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:#e6d29a;color:#111;padding:11px 18px;font-size:12px;font-weight:700;box-shadow:0 8px 30px #0008;transition:.25s}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+    .reveal.visible{opacity:1;transform:translateY(0)}
+    .fade-in{animation:fadeIn .9s ease both}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
+    @media(max-width:760px){
+      .brand-wrap{padding:18px 12px 12px;gap:11px}.brand-logo{width:48px;height:48px}.brand-name{font-size:36px}.brand-category{font-size:8px;letter-spacing:.27em}.brand-tagline{font-size:11px}
+      .nav{gap:11px 18px;padding-bottom:12px}.nav a{font-size:9px}
+      .hero{min-height:510px;padding:60px 20px}.hero::after{inset:10px}
+      .section{padding:67px 17px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.product-card img{height:270px}.product-caption{left:13px;right:10px;bottom:12px}.product-caption h3{font-size:19px}
+      .contact-grid,.payment-grid,.social-grid{grid-template-columns:1fr}.payment-card.bank{grid-column:auto}
+      .qr-inner{grid-template-columns:1fr;gap:25px}.qr-promo-image{max-height:260px}
+    }
+    @media(max-width:420px){
+      .top-credit{font-size:8px;letter-spacing:.04em;padding-inline:9px}.brand-name{font-size:29px;letter-spacing:.12em}.brand-logo{width:40px;height:40px}
+      .nav{gap:9px 13px}.nav a{font-size:8px;letter-spacing:.08em}
+      .product-card img{height:220px}.product-caption h3{font-size:16px}.product-caption small{font-size:8px}
+      .info-card,.payment-card{padding:20px}.copy-row{align-items:flex-start;flex-direction:column}.copy-btn{width:100%}
+    }
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+  <style>
+    /* ===== V2 upgrades ===== */
+    :root{--serif:'Cormorant Garamond',Georgia,serif;--sans:'Montserrat',Arial,Helvetica,sans-serif}
+    body{padding-top:34px}
+    .miss{display:none!important}
+    .top-credit{height:34px;min-height:34px}
+    .site-header{display:contents}
+    .brand-name{font-weight:600}
+    .brand-logo{animation:bob 6s ease-in-out infinite}
+    @keyframes bob{50%{transform:translateY(-6px)}}
+    .nav{position:sticky;top:34px;z-index:900;max-width:none;margin:0;padding:11px 14px;background:rgba(8,8,8,.93);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-block:1px solid rgba(255,255,255,.08)}
+    .nav a{position:relative;padding:4px 0}
+    .nav a[aria-current]{color:var(--gold2)}
+    .nav a[aria-current]::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:1px;background:var(--gold)}
+    .btn{border-radius:99px}
+    .btn.wa{background:#25D366;border-color:#25D366;color:#04210f}.btn.wa:hover{background:#25D366;filter:brightness(1.1)}
+    .hero{min-height:440px}
+    .product-card,.info-card,.social-card,.location-card{border-radius:20px}
+    .contact-number,.qr-contact strong{font-family:var(--sans);font-variant-numeric:lining-nums tabular-nums;letter-spacing:.1em}
+    /* pages */
+    .page{display:none;padding-top:38px}
+    html[data-page=payments] #payments,html[data-page=contact] #contact,html[data-page=social] #social,html[data-page=location] #location{display:block;animation:fadeIn .6s ease both}
+    html:not([data-page=home]) .home{display:none}
+    .back{display:inline-flex;align-items:center;margin-bottom:26px;padding:9px 18px;border:1px solid var(--line);border-radius:99px;color:var(--gold2);font-size:11px;letter-spacing:.12em;transition:.25s}
+    .back:hover{background:var(--gold);color:#080808}
+    /* option cards */
+    .opt-grid{display:grid;grid-template-columns:1fr;gap:18px;max-width:820px;margin:0 auto}
+    .opt{position:relative;display:block;min-height:300px;border:1px solid var(--line);border-radius:22px;overflow:hidden;isolation:isolate;background:linear-gradient(145deg,#211c10,#0b0b0b);transition:opacity .7s ease,transform .45s ease,border-color .4s,box-shadow .4s}
+    .opt.main{grid-column:1/-1;min-height:350px;border-color:var(--gold)}
+    .opt img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform .8s ease}
+    .opt::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(transparent 15%,rgba(0,0,0,.92))}
+    .opt:hover{transform:translateY(-5px);border-color:var(--gold2);box-shadow:0 22px 50px -26px rgba(200,166,93,.65)}
+    .opt:hover img{transform:scale(1.07)}
+    .opt-body{position:absolute;inset:auto 0 0;padding:24px}
+    .opt small{color:var(--gold2);font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:700}
+    .opt h3{font:600 clamp(26px,5vw,36px)/1.1 var(--serif);margin:5px 0 7px}
+    .opt p{color:#d6d2c9;font-size:13px;max-width:440px;margin:0 0 15px}
+    .opt-go{display:inline-flex;padding:9px 20px;border-radius:99px;background:var(--gold);color:#080808;font-size:11px;font-weight:700;letter-spacing:.1em}
+    .opt-go::after{content:"\2192";margin-left:8px}
+    /* payments */
+    .steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:20px}
+    .step{display:flex;align-items:center;gap:12px;padding:15px 18px;border:1px solid var(--line);border-radius:16px;background:#101010;font-size:13px;color:#d6d2c9}
+    .step b{flex:none;width:30px;height:30px;border-radius:50%;background:var(--gold);color:#080808;display:grid;place-items:center;font-size:13px}
+    .payment-card{border-radius:20px;padding:28px 24px;text-align:center;overflow:hidden;transition:opacity .7s ease,transform .45s ease,border-color .35s,box-shadow .35s}
+    .payment-card::before{content:"";position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+    .payment-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 20px 44px -26px rgba(200,166,93,.6)}
+    .logo-plate{height:68px;min-width:150px;width:max-content;max-width:100%;margin:0 auto 14px;padding:10px 18px;border-radius:14px;background:#fff;display:grid;place-items:center}
+    .logo-plate:has(.miss){display:none}
+    .payment-logo{height:46px;max-width:170px;margin:0;object-fit:contain;object-position:center}
+    .payment-card h3{font-size:30px;font-weight:600}
+    .holder{font-size:17px;font-weight:600;color:#fff}
+    .payment-value{font-family:var(--sans);font-variant-numeric:lining-nums tabular-nums;font-weight:600;font-size:clamp(19px,5.2vw,24px);letter-spacing:.1em;color:var(--gold2)}
+    .payment-card.iban .payment-value{font-size:clamp(15px,4.2vw,19px);letter-spacing:.06em;overflow-wrap:anywhere}
+    .copy-btn.big{width:100%;margin-top:20px;padding:14px;border:0;border-radius:99px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#080808;font-weight:700;font-size:11px}
+    .copy-btn.big:hover{filter:brightness(1.08)}.copy-btn.big.done{background:#25D366}
+    .proof{margin-top:22px;text-align:center;padding:30px 22px;border:1px solid var(--gold);border-radius:20px;background:radial-gradient(ellipse at top,#1f1b10,#0d0d0d 70%)}
+    .proof h3{font:600 28px var(--serif);margin:0 0 6px}.proof p{color:#c9c4ba;font-size:13px;margin:0 auto 18px;max-width:460px}
+    /* contact form */
+    .send-card{max-width:760px;margin:26px auto 0;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,#151515,#0e0e0e)}
+    .send-card h3{font:600 26px var(--serif);margin:0 0 4px}.send-card>p{color:var(--muted);font-size:13px;margin:0 0 18px}
+    .send-card label{display:block;font-size:11px;letter-spacing:.1em;color:var(--gold);margin-bottom:14px}
+    .send-card input,.send-card textarea{display:block;width:100%;margin-top:6px;padding:13px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.15);background:#0a0a0a;color:#fff;font:inherit;font-size:16px}
+    .send-card input:focus,.send-card textarea:focus{outline:none;border-color:var(--gold)}
+    .quick{max-width:1100px;margin:22px auto 0;padding:0 16px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .qbtn{position:relative;display:flex;align-items:center;gap:12px;padding:16px;border-radius:18px;border:1px solid var(--gold);background:linear-gradient(145deg,#1d1810,#0c0c0c);color:#fff;font-weight:700;font-size:13px;letter-spacing:.05em;line-height:1.25;overflow:hidden;isolation:isolate;animation:qbob 3.8s ease-in-out infinite;transition:background .3s,color .3s,box-shadow .3s}
+    .qbtn::after{content:"";position:absolute;top:0;left:-60%;width:38%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.2),transparent);transform:skewX(-20deg);animation:qshine 5s ease-in-out infinite;z-index:-1}
+    .qbtn:nth-child(3){animation-delay:-.8s}.qbtn:nth-child(4){animation-delay:-1.6s}.qbtn:nth-child(5){animation-delay:-2.4s}.qbtn:nth-child(6){animation-delay:-3.1s}
+    .qbtn:nth-child(3)::after{animation-delay:.6s}.qbtn:nth-child(4)::after{animation-delay:1.2s}.qbtn:nth-child(5)::after{animation-delay:1.8s}.qbtn:nth-child(6)::after{animation-delay:2.4s}
+    .qi{width:28px;height:28px;flex:none;fill:var(--gold2);transition:fill .3s}
+    .qbtn:hover,.qbtn:focus-visible{background:var(--gold);color:#080808;box-shadow:0 14px 34px -16px rgba(200,166,93,.8)}
+    .qbtn:hover .qi,.qbtn:focus-visible .qi{fill:#080808}
+    .qbtn.pri{grid-column:1/-1;justify-content:center;padding:21px 16px;font-size:16px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#080808;animation:qbob 3.8s ease-in-out infinite,qpulse 2.4s ease-out infinite}
+    .qbtn.pri .qi{fill:#080808;width:32px;height:32px}
+    @keyframes qbob{50%{transform:translateY(-4px)}}
+    @keyframes qpulse{0%{box-shadow:0 0 0 0 rgba(200,166,93,.55)}70%,100%{box-shadow:0 0 0 16px rgba(200,166,93,0)}}
+    @keyframes qshine{0%,55%{left:-60%}100%{left:140%}}
+    @media(min-width:900px){.quick{grid-template-columns:repeat(5,minmax(0,1fr));margin-top:30px}.qbtn.pri{grid-column:auto;font-size:14px;padding:18px 16px}.qbtn.pri .qi{width:28px;height:28px}.qbtn{flex-direction:column;text-align:center;gap:8px;padding:20px 12px}}
+    @media(prefers-reduced-motion:reduce){.qbtn,.qbtn::after{animation:none!important}}
+    html[data-page=categories] #categories{display:block;animation:fadeIn .6s ease both}
+    @media(max-width:600px){.cat-body{padding:14px 12px 16px}.cat-body h3{font-size:20px}.cat-body p{font-size:11.5px;margin-bottom:12px}.cat-body .btn{width:100%;padding:11px 6px;font-size:10px;letter-spacing:.04em}}
+    .product-caption small{line-height:1.5}
+    .welcome{text-align:center;font:italic 500 clamp(24px,6.5vw,34px)/1.3 var(--serif);color:var(--gold2);margin:26px 16px 0}
+    .qbtn.pri{grid-column:auto;font-size:13px;padding:16px;justify-content:flex-start}
+    @media(min-width:900px){.quick{grid-template-columns:repeat(4,minmax(0,1fr))}.qbtn.pri{font-size:14px;padding:20px 12px}}
+    .nav{flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;gap:22px!important}
+    .nav::-webkit-scrollbar{display:none}
+    .nav a{white-space:nowrap;flex:none;font-size:10.5px!important}
+    .nav a:first-child{margin-left:auto}.nav a:last-child{margin-right:auto}
+    .cat-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    @media(min-width:900px){.cat-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}}
+    .cat-card{border:1px solid var(--line);border-radius:20px;overflow:hidden;background:#101010;transition:opacity .7s ease,transform .45s ease,border-color .35s,box-shadow .35s}
+    .cat-card:hover{transform:translateY(-5px);border-color:var(--gold);box-shadow:0 20px 44px -26px rgba(200,166,93,.6)}
+    .cat-img{aspect-ratio:4/3;overflow:hidden;background:linear-gradient(145deg,#211c10,#0b0b0b)}
+    .cat-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+    .cat-card:hover .cat-img img{transform:scale(1.07)}
+    .cat-body{padding:20px 22px 24px}
+    .cat-body h3{font:600 29px/1.1 var(--serif);margin:0 0 6px}
+    .cat-body p{color:#c9c4ba;font-size:13px;margin:0 0 16px}
+    .cat-card.more{display:flex;align-items:center;text-align:center;border-color:var(--gold);background:radial-gradient(ellipse at top,#1f1b10,#0d0d0d 70%)}
+    @media(max-width:760px){.hero{min-height:400px}.opt-grid{grid-template-columns:1fr}.opt,.opt.main{min-height:270px}.steps{grid-template-columns:1fr}.page{padding-top:28px}}
+  </style>
+</head>
+<body>
+  <div class="top-credit">
+    <span class="credit-name">Print &amp; Design By Ali Graphics Dir</span>
+    <a class="top-contact" href="https://wa.me/923118322287?text=Thank%20you%20for%20choosing%20Ali%20Graphics!%20How%20can%20we%20help%20you%20with%20your%20design%20or%20printing%3F" target="_blank" rel="noopener" aria-label="Contact Ali Graphics on WhatsApp">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.58 0 .25 5.33.25 11.88c0 2.1.55 4.15 1.6 5.96L.15 24l6.32-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.5-8.42ZM12.14 21.75a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.83 9.83 0 0 1-1.51-5.23c0-5.46 4.44-9.9 9.9-9.9a9.84 9.84 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7c0 5.47-4.44 9.91-9.9 9.91Zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+      Contact Us
+    </a>
+  </div>
+
+  <header class="site-header">
+    <div class="brand-wrap">
+      <!-- IMAGE 01: replace images/numan-crown.png with your transparent crown logo -->
+      <img class="brand-logo" src="images/numan-crown.png" alt="NUMAN crown logo" onerror="this.style.display='none'">
+      <div>
+        <div class="brand-name">NUMAN</div>
+        <div class="brand-category">FASHION &amp; GIFTS</div>
+        <p class="brand-tagline">Wear Style, Live Better · Gifts for Every Moment</p>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#categories">Services</a>
+      <a href="#contact">Contact</a>
+      <a href="#social">Social Media</a>
+      <a href="#location">Location</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="home">
+      <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+        <symbol id="qi-pay" viewBox="0 0 24 24"><path d="M3 6a2 2 0 012-2h14a2 2 0 012 2v2H3V6zm0 4h18v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8zm3 5v2h5v-2H6z"/></symbol>
+        <symbol id="qi-chat" viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 012 2v9a2 2 0 01-2 2H9l-5 4v-4a2 2 0 01-2-2V6a2 2 0 012-2z"/></symbol>
+        <symbol id="qi-gift" viewBox="0 0 24 24"><path d="M3 8h8v4H3zM13 8h8v4h-8zM5 13h6v8H5zM13 13h6v8h-6zM8 3.5 11 8H6.5zM16 3.5 17.5 8H13z"/></symbol>
+        <symbol id="qi-share" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8 10.2l7.6-4.4.9 1.6-7.6 4.4zM8 13.8l.9-1.6 7.6 4.4-.9 1.6z"/></symbol>
+        <symbol id="qi-pin" viewBox="0 0 24 24"><path d="M12 2a7 7 0 00-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 00-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></symbol>
+      </svg>
+      <p class="welcome">Your gift is waiting for you&hellip;</p>
+      <div class="quick">
+        <a class="qbtn pri" href="#contact"><svg class="qi" aria-hidden="true"><use href="#qi-chat"/></svg><span>Contact &amp; Send Info</span></a>
+        <a class="qbtn" href="#categories"><svg class="qi" aria-hidden="true"><use href="#qi-gift"/></svg><span>Our Services</span></a>
+        <a class="qbtn" href="#social"><svg class="qi" aria-hidden="true"><use href="#qi-share"/></svg><span>Social Media</span></a>
+        <a class="qbtn" href="#location"><svg class="qi" aria-hidden="true"><use href="#qi-pin"/></svg><span>Location</span></a>
+      </div>
+    <section class="hero" id="home">
+      <div class="fade-in">
+        <span class="eyebrow">Style • Elegance • Thoughtful Gifting</span>
+        <h1>Discover Your <span>Signature</span> Style</h1>
+        <p>Wear Style, Live Better. Gifts for Every Moment.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#contact">Contact Us</a>
+          <a class="btn btn-outline" href="#collections">Explore Collection</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section opts" id="options">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Start here</span>
+        <h2>How can we help you?</h2>
+        <p>Choose an option to continue.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="opt-grid">
+        <a class="opt main reveal" href="#contact">
+          <!-- IMAGE: images/option-contact.jpg -->
+          <img src="images/option-contact.jpg" alt="" loading="lazy">
+          <div class="opt-body"><small>WhatsApp &amp; call</small><h3>Contact &amp; Send Information</h3><p>Message us your order or enquiry.</p><span class="opt-go">Open</span></div>
+        </a>
+        <a class="opt reveal" href="#categories">
+          <!-- IMAGE: images/option-categories.jpg -->
+          <img src="images/option-categories.jpg" alt="" loading="lazy">
+          <div class="opt-body"><small>Everything we offer</small><h3>Our Services</h3><p>Men's and women's clothing, accessories, gifts, uniforms and decoration.</p><span class="opt-go">Open</span></div>
+        </a>
+        <a class="opt reveal" href="#social">
+          <!-- IMAGE: images/option-social.jpg -->
+          <img src="images/option-social.jpg" alt="" loading="lazy">
+          <div class="opt-body"><small>Stay connected</small><h3>Social Media</h3><p>TikTok and Facebook pages.</p><span class="opt-go">Open</span></div>
+        </a>
+        <a class="opt reveal" href="#location">
+          <!-- IMAGE: images/option-location.jpg -->
+          <img src="images/option-location.jpg" alt="" loading="lazy">
+          <div class="opt-body"><small>Find our shop</small><h3>Store Location</h3><p>The Mall of Dir, Upper Dir.</p><span class="opt-go">Open</span></div>
+        </a>
+      </div>
+    </section>
+
+    <div class="intro-strip">“A little elegance in every detail — a thoughtful gift for every occasion.”</div>
+
+    <section class="section" id="collections">
+      <div class="section-heading reveal">
+        <span class="eyebrow">Curated for you</span>
+        <h2>Explore Our World</h2>
+        <p>Fashion favourites and memorable gifts, presented with care.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="product-grid">
+        <article class="product-card reveal">
+          <!-- IMAGE 07: images/mens-clothing.jpg -->
+          <img src="images/mens-clothing.jpg" alt="Men's clothing collection" loading="lazy">
+          <div class="product-caption"><small>Refined everyday style</small><h3>Men's Clothing</h3></div>
+        </article>
+        <article class="product-card reveal">
+          <!-- IMAGE 08: images/womens-clothing.jpg -->
+          <img src="images/womens-clothing.jpg" alt="Women's clothing collection" loading="lazy">
+          <div class="product-caption"><small>Elegance in every look</small><h3>Women's Clothing</h3></div>
+        </article>
+        <article class="product-card reveal">
+          <!-- IMAGE 09: images/fashion-accessories.jpg -->
+          <img src="images/fashion-accessories.jpg" alt="Fashion accessories" loading="lazy">
+          <div class="product-caption"><small>The finishing touch</small><h3>Fashion Accessories</h3></div>
+        </article>
+        <article class="product-card reveal">
+          <!-- IMAGE 10: images/gift-boxes.jpg -->
+          <img src="images/gift-boxes.jpg" alt="Gift boxes" loading="lazy">
+          <div class="product-caption"><small>Beautifully presented</small><h3>Gift Boxes</h3></div>
+        </article>
+        <article class="product-card reveal">
+          <!-- IMAGE 11: images/gift-items.jpg -->
+          <img src="images/gift-items.jpg" alt="Gift items" loading="lazy">
+          <div class="product-caption"><small>Make moments special</small><h3>Gift Items</h3></div>
+        </article>
+        <article class="product-card reveal">
+          <!-- IMAGE 12: images/fashion-background.jpg is also used as the hero background -->
+          <img src="images/fashion-background.jpg" alt="Premium fashion and shopping atmosphere" loading="lazy">
+          <div class="product-caption"><small>Discover more</small><h3>Shopping &amp; More</h3></div>
+        </article>
+      </div>
+      <div style="text-align:center;margin-top:28px"><a class="btn btn-gold" href="#categories">View All Services</a></div>
+    </section>
+
+    </div>
+
+    <section class="section page" id="categories">
+      <a class="back" href="#home">&larr; Back to Home</a>
+      <div class="section-heading reveal">
+        <span class="eyebrow">Everything we offer</span>
+        <h2>Our Services</h2>
+        <p>Choose a service and message us on WhatsApp for designs and prices.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="cat-grid">
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/mens-clothing.jpg -->
+          <div class="cat-img"><img src="images/mens-clothing.jpg" alt="Men's clothing" loading="lazy"></div>
+          <div class="cat-body"><h3>Men's Clothing</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Men%27s%20Clothing%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/womens-clothing.jpg -->
+          <div class="cat-img"><img src="images/womens-clothing.jpg" alt="Women's clothing" loading="lazy"></div>
+          <div class="cat-body"><h3>Women's Clothing</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Women%27s%20Clothing%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/fashion-accessories.jpg -->
+          <div class="cat-img"><img src="images/fashion-accessories.jpg" alt="Fashion accessories" loading="lazy"></div>
+          <div class="cat-body"><h3>Fashion Accessories</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Fashion%20Accessories%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/gift-boxes.jpg -->
+          <div class="cat-img"><img src="images/gift-boxes.jpg" alt="Gift boxes" loading="lazy"></div>
+          <div class="cat-body"><h3>Gift Boxes</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Gift%20Boxes%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/gift-items.jpg -->
+          <div class="cat-img"><img src="images/gift-items.jpg" alt="Gift items" loading="lazy"></div>
+          <div class="cat-body"><h3>Gift Items</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Gift%20Items%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/cat-birthday-gifts.jpg -->
+          <div class="cat-img"><img src="images/cat-birthday-gifts.jpg" alt="Birthday gifts" loading="lazy"></div>
+          <div class="cat-body"><h3>Birthday Gifts</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Birthday%20Gifts%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/cat-baby-gifts.jpg -->
+          <div class="cat-img"><img src="images/cat-baby-gifts.jpg" alt="Baby gifts" loading="lazy"></div>
+          <div class="cat-body"><h3>Baby Gifts</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Baby%20Gifts%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/cat-anniversary-gifts.jpg -->
+          <div class="cat-img"><img src="images/cat-anniversary-gifts.jpg" alt="Anniversary gifts" loading="lazy"></div>
+          <div class="cat-body"><h3>Anniversary Gifts</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Anniversary%20Gifts%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/cat-decoration.jpg -->
+          <div class="cat-img"><img src="images/cat-decoration.jpg" alt="Decoration" loading="lazy"></div>
+          <div class="cat-body"><h3>Decoration</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Decoration%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/cat-uniforms.jpg -->
+          <div class="cat-img"><img src="images/cat-uniforms.jpg" alt="Uniforms" loading="lazy"></div>
+          <div class="cat-body"><h3>Uniforms</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Uniforms%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card reveal">
+          <!-- IMAGE: images/fashion-background.jpg -->
+          <div class="cat-img"><img src="images/fashion-background.jpg" alt="Shopping and more" loading="lazy"></div>
+          <div class="cat-body"><h3>Shopping &amp; More</h3><p>Message us for designs and prices.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20am%20interested%20in%20Shopping%20%26%20More%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Ask on WhatsApp</a></div>
+        </article>
+        <article class="cat-card more reveal">
+          <div class="cat-body"><h3>And much more</h3><p>Looking for something different? Tell us what you need.</p><a class="btn btn-gold wa" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20ask%20about%20a%20custom%20order%20from%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">Custom Order</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section page" id="contact">
+      <a class="back" href="#home">&larr; Back to Home</a>
+      <div class="section-heading reveal">
+        <span class="eyebrow">We are here to help</span>
+        <h2>Contact &amp; Send Information</h2>
+        <p>Questions about fashion, gifts or an order? Get in touch with us.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="info-card reveal">
+          <h3>WhatsApp &amp; Phone</h3>
+          <p class="contact-number">03279095115</p>
+          <p>Chat with NUMAN FASHION &amp; GIFTS or call us directly.</p>
+          <a class="btn btn-gold" href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20contact%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">WhatsApp Us</a>
+          <a class="btn btn-outline" href="tel:+923279095115">Call Now</a>
+        </div>
+        <div class="info-card reveal">
+          <h3>Visit Our Store</h3>
+          <p>The Mall of Dir, Second Floor, Shop No. 34, Upper Dir, Pakistan.</p>
+          <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Mall%20of%20Dir%20Second%20Floor%2C%20Shop%20No.%2034%20Upper%20Dir%2C%20Pakistan" target="_blank" rel="noopener">Open in Google Maps</a>
+        </div>
+      </div>
+      <form class="send-card reveal" id="sendForm">
+        <h3>Send us your information</h3>
+        <p>Fill in your details and send them to us directly on WhatsApp.</p>
+        <label>Your name<input name="n" required autocomplete="name"></label>
+        <label>Phone number<input name="p" type="tel" inputmode="tel" autocomplete="tel"></label>
+        <label>Message or order details<textarea name="m" rows="4" required></textarea></label>
+        <button class="btn btn-gold wa" type="submit">Send on WhatsApp</button>
+      </form>
+    </section>
+
+    <section class="section page" id="social">
+      <a class="back" href="#home">&larr; Back to Home</a>
+      <div class="section-heading reveal">
+        <span class="eyebrow">Stay connected</span>
+        <h2>Follow NUMAN</h2>
+        <p>Follow our social pages for updates and inspiration.</p>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="social-grid">
+        <a class="social-card reveal" href="https://www.tiktok.com/@numanfashionandgifts?_r=1&amp;_t=ZN-9BfAdGx8KRC" target="_blank" rel="noopener" aria-label="Open NUMAN TikTok in a new tab">
+          <!-- IMAGE 02: images/tiktok-logo.png -->
+          <img src="images/tiktok-logo.png" alt="TikTok logo" loading="lazy">
+          <div><strong>TikTok</strong><span>@numanfashionandgifts</span></div>
+        </a>
+        <a class="social-card reveal" href="https://www.facebook.com/share/1DjGtDFeMM/" target="_blank" rel="noopener" aria-label="Open NUMAN Facebook in a new tab">
+          <!-- IMAGE 03: images/facebook-logo.png -->
+          <img src="images/facebook-logo.png" alt="Facebook logo" loading="lazy">
+          <div><strong>Facebook</strong><span>Visit our Facebook page</span></div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section page" id="location">
+      <a class="back" href="#home">&larr; Back to Home</a>
+      <div class="section-heading reveal">
+        <span class="eyebrow">Find us</span>
+        <h2>Our Location</h2>
+        <div class="gold-rule"></div>
+      </div>
+      <div class="location-card reveal">
+        <div class="pin" aria-hidden="true">⌖</div>
+        <h3>NUMAN FASHION &amp; GIFTS</h3>
+        <p>The Mall of Dir Second Floor, Shop No. 34 Upper Dir, Pakistan</p>
+        <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&amp;query=The%20Mall%20of%20Dir%20Second%20Floor%2C%20Shop%20No.%2034%20Upper%20Dir%2C%20Pakistan" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+    </section>
+
+    <section class="qr-section" id="ali-graphics">
+      <div class="qr-inner">
+        <div class="reveal">
+          <!-- IMAGE 13: images/ali-graphics-logo.png (optional; text branding remains if absent) -->
+          <img class="ali-logo" src="images/ali-graphics-logo.png" alt="Ali Graphics Dir logo" onerror="this.style.display='none'" loading="lazy">
+          <span class="eyebrow">ALI GRAPHICS DIR · DESIGN &amp; PRINT</span>
+          <h2>NEED A <span>QR CODE?</span></h2>
+          <p>Get a professionally designed QR code for your business, payments, website or social media.</p>
+          <p>Need a custom QR code? Get in touch with Ali Graphics Dir.</p>
+          <div class="qr-contact">
+            <a class="btn btn-gold" href="https://wa.me/923118322287?text=Hello%20Ali%20Graphics!%20I%20need%20a%20QR%20code.%20Please%20share%20the%20details." target="_blank" rel="noopener">
+              <svg class="whatsapp-mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.8 11.8 0 0 0 12.13 0C5.58 0 .25 5.33.25 11.88c0 2.1.55 4.15 1.6 5.96L.15 24l6.32-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.88-5.33 11.88-11.88 0-3.17-1.23-6.15-3.5-8.42ZM12.14 21.75a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.75.98 1-3.65-.24-.38a9.83 9.83 0 0 1-1.51-5.23c0-5.46 4.44-9.9 9.9-9.9a9.84 9.84 0 0 1 7.01 2.9 9.84 9.84 0 0 1 2.9 7c0 5.47-4.44 9.91-9.9 9.91Zm5.43-7.42c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35Z"/></svg>
+              WhatsApp Ali Graphics
+            </a>
+            <strong>03118322287</strong>
+          </div>
+        </div>
+        <div class="reveal">
+          <!-- IMAGE 14: images/qr-design-promotion.jpg -->
+          <img class="qr-promo-image" src="images/qr-design-promotion.jpg" alt="QR code and graphic design promotional artwork" loading="lazy">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">NUMAN FASHION &amp; GIFTS</div>
+    <p>Wear Style, Live Better.</p>
+    <p>Gifts for Every Moment.</p>
+    <div class="footer-links">
+      <a href="tel:+923279095115">03279095115</a>
+      <a href="https://wa.me/923279095115?text=Assalam-o-Alaikum%2C%20I%20would%20like%20to%20contact%20NUMAN%20FASHION%20%26%20GIFTS." target="_blank" rel="noopener">WhatsApp</a>
+      <a href="https://www.tiktok.com/@numanfashionandgifts?_r=1&amp;_t=ZN-9BfAdGx8KRC" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.facebook.com/share/1DjGtDFeMM/" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <p>The Mall of Dir, Second Floor, Shop No. 34, Upper Dir, Pakistan.</p>
+    <p class="copyright">© <span id="year"></span> NUMAN FASHION &amp; GIFTS. All rights reserved. Website design by Ali Graphics Dir.</p>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied successfully!</div>
+  <script>
+    (() => {
+      const toast = document.getElementById('toast');
+      let toastTimer;
+      function showToast(message) {
+        toast.textContent = message;
+        toast.classList.add('show');
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => toast.classList.remove('show'), 2200);
+      }
+      async function copyText(value) {
+        if (navigator.clipboard && window.isSecureContext) {
+          try { await navigator.clipboard.writeText(value); return true; } catch (error) {}
+        }
+        const field = document.createElement('textarea');
+        field.value = value;
+        field.setAttribute('readonly', '');
+        field.style.position = 'fixed';
+        field.style.opacity = '0';
+        field.style.left = '-9999px';
+        document.body.appendChild(field);
+        field.select();
+        field.setSelectionRange(0, field.value.length);
+        let copied = false;
+        try { copied = document.execCommand('copy'); } catch (error) {}
+        field.remove();
+        return copied;
+      }
+      document.querySelectorAll('[data-copy]').forEach(button => {
+        button.addEventListener('click', async () => {
+          const success = await copyText(button.dataset.copy);
+          showToast(success ? 'Copied successfully!' : 'Copy failed — please copy manually.');
+          if (success) { const o = button.dataset.l || (button.dataset.l = button.textContent); button.textContent = 'Copied \u2713'; button.classList.add('done'); clearTimeout(button._t); button._t = setTimeout(() => { button.textContent = o; button.classList.remove('done'); }, 1600); }
+        });
+      });
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        const observer = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealItems.forEach(item => observer.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add('visible'));
+      }
+    })();
+  </script>
+  <script>
+    (() => {
+      const P = ['contact', 'social', 'location', 'categories'];
+      function route() {
+        const h = location.hash.slice(1), p = P.includes(h) ? h : 'home';
+        document.documentElement.dataset.page = p;
+        document.querySelectorAll('.nav a').forEach(a => a.getAttribute('href') === '#' + p ? a.setAttribute('aria-current', 'page') : a.removeAttribute('aria-current'));
+        const t = p === 'home' && h && h !== 'home' ? document.getElementById(h) : null;
+        t ? t.scrollIntoView() : window.scrollTo({ top: 0, behavior: 'instant' });
+      }
+      addEventListener('hashchange', route); route();
+      document.querySelectorAll('img').forEach(i => { const f = () => i.classList.add('miss'); i.addEventListener('error', f); if (i.complete && !i.naturalWidth) f(); });
+      const form = document.getElementById('sendForm');
+      form && form.addEventListener('submit', e => {
+        e.preventDefault();
+        const d = new FormData(form);
+        const text = ['Assalam-o-Alaikum, I would like to contact NUMAN FASHION & GIFTS.', 'Name: ' + d.get('n'), d.get('p') ? 'Phone: ' + d.get('p') : '', 'Message: ' + d.get('m')].filter(Boolean).join('\n');
+        window.open('https://wa.me/923279095115?text=' + encodeURIComponent(text), '_blank', 'noopener');
+      });
+    })();
+  </script>
+</body>
+</html>
